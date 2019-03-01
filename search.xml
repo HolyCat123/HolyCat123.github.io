@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[spring security注册后登录]]></title>
+    <url>%2F2019%2F03%2F01%2Fspring-security%E6%B3%A8%E5%86%8C%E5%90%8E%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python学习笔记(一)]]></title>
+    <url>%2F2019%2F03%2F01%2Fpython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[python，俗称蟒蛇。是由Guido van Rossum圣诞节无聊，打发时间鼓捣出的一种脚本语言（Linus休息的时候写出来git，成就了现在如日中天的GitHub，可见大佬们都是无敌的）。历经多年的发展，借着人工智能的浪潮，已经成为了世界上最火爆的语言之一。python的优点在于它的语法十分简洁，据说，实现同样的功能，python的代码量只是JAVA的五分之一。不过，python的执行效率也一直饱受诟病，这也是python一直不够火的原因。当然，这一切都随着计算机性能的大幅度提升成为了过去式。现在而言，对于很多公司来说，重要的是快速迭代，因而，python成为了首选。例如著名的网站——豆瓣，就是采用python制作的。 python的安装及环境配置windows安装打开python官网，选择Downloads，会出现如下界面 选择Python3.7.2进行下载安装即可。 下载之后，双击安装，与安装其它软件并无差别。唯一的不同是，双击安装，进入安装页面后，请务必记得勾选Add To Path，这样才能在CMD中打开python。 linux安装macos安装 python基本语法安装完毕python之后，则可以在命令行中输入python后回车（也可以打开IDLE）进行交互式操作（windows系统按住shift，然后点击鼠标右键，会有一个在此处打开命令行窗口或者powershell，点击即可进入命令行）。 进入python后的显示界面如下： 如此显示，则代表成功启动python。 python的数据类型python是一门弱数据类型语言，即它定义一个变量的时候，并不需要声明该变量的数据类型。在python中有六种基本的数据类型，分别是Number(数字),String(字符串),Tuple(元组),List(列表),Dictionary(字典),Set(集合)。其中前三种属于不可变数据，后三种属于可变数据。下面讲解六种基本数据类型。 Number类型int类型int类型即整型，是数字5，10，这样没有小数点的类型。 123&gt;&gt;&gt;a = 5&gt;&gt;&gt;type(a)&lt;class 'int'&gt; float类型float类型即浮点型，是5.0，4.5这样有小数点的类型。 123&gt;&gt;&gt;a = 4.3&gt;&gt;&gt;type(a)&lt;class 'float'&gt; complex类型complex类型复数类型，是类似于4+5j这样的数。 123&gt;&gt;&gt;a = 5+4j&gt;&gt;&gt;type(a)&lt;class 'complex'&gt; bool类型bool类型是布尔类型，该类型只有False和True两个值。 123&gt;&gt;&gt;a = True&gt;&gt;&gt;type(a)&lt;class 'bool'&gt; 布尔类型虽然表示逻辑，但是可以直接与数字进行计算。True 的值为1，False的值为0。 123&gt;&gt;&gt;a, b= True, 1 #对a，b两个变量分别赋值，a为True，b为1&gt;&gt;&gt;a + b2 string类型string类型即字符串类型，python中的字符串被单引号’’或者双引号“”括起来，同时使用\转义特殊字符。两个字符串可以直接拼接，这样就产生了一个新的字符串。同时在python中，string类型可以方便的剪切，可以使用形如 变量[头下标:尾下标]的代码进行字符串剪接。 1234567891011121314151617181920&gt;&gt;&gt;w = '赵襄' #双引号与单引号并无区别&gt;&gt;&gt;w #也可以使用print(w)打印，直接s仅限于交互窗口'赵襄'&gt;&gt;&gt;z = '襄襄'&gt;&gt;&gt;wz = w + z&gt;&gt;&gt;print(wz)'赵襄襄襄'&gt;&gt;&gt;wz[0:1] #所有的编程语言中，第一个字符都是由0开始算的。'襄'&gt;&gt;&gt;wz[0:-1] #-1表示从尾部数起'赵襄襄'&gt;&gt;&gt;wz[0] #如同wz[0:1]，如果没有尾下标，则将处于头下标的字符输出。'襄'&gt;&gt;&gt;wz*2 #python中字符串可以使用乘法，表示将该字符串复制n遍'赵襄襄襄赵襄襄襄'&gt;&gt;&gt;wz[1:3]*2 #也可以混合一起用，python是一门胶水语言'襄襄襄襄'&gt;&gt;&gt;print(wz+'\n123') #\后跟字符会将字符转义，\n即是回车，必须加print，不然默认交互界面是不转义的赵襄襄襄123 tuple类型tuple类型即元组类型，tuple类型和list类型十分相似，唯一的区别是list里面的元素可以改变，而元组不能。同时元组，列表索引的方式，与string是一模一样的。元组的定义是用小括号()包围。 12345678910111213141516171819&gt;&gt;&gt;tuple = ( 'abcd', 786 , 2.23, '阿襄', 70.2 )&gt;&gt;&gt;tinytuple = (123, '阿襄') &gt;&gt;&gt;print (tuple) # 输出完整元组('abcd', 786 , 2.23, '阿襄', 70.2)&gt;&gt;&gt;print (tuple[0]) # 输出元组的第一个元素abcd&gt;&gt;&gt;print (tuple[1:3]) # 输出从第二个元素开始到第三个元素(786, 2.23)&gt;&gt;&gt;print (tuple[2:]) # 输出从第三个元素开始的所有元素(2.23, '阿襄'， 70.2)&gt;&gt;&gt;print (tinytuple * 2) # 输出两次元组(123, '阿襄', 123, '阿襄')&gt;&gt;&gt;print (tuple + tinytuple) # 连接元组( 'abcd', 786 , 2.23, '阿襄', 70.2 , 123, '阿襄')&gt;&gt;&gt;tinytuple[1] = '襄襄' #修改元组的元素会报错，就算修改后和修改前一样也是如此Traceback (most recent call last): File "&lt;stdin&gt;", line 1, in &lt;module&gt;TypeError: 'tuple' object does not support item assignment list类型list类型即列表类型，与tuple十分相似，不多赘述。 12345678910111213141516171819202122&gt;&gt;&gt;list = [ 'abcd', 786 , 2.23, '阿襄', 70.2 ]&gt;&gt;&gt;tinylist = [123, '阿襄'] &gt;&gt;&gt;print (list) # 输出完整列表['abcd', 786 , 2.23, '阿襄', 70.2]&gt;&gt;&gt;print (list[0]) # 输出列表第一个元素abcd&gt;&gt;&gt;print (list[1:3]) # 从第二个开始输出到第三个元素[786 , 2.23]&gt;&gt;&gt;print (list[2:]) # 输出从第三个元素开始的所有元素[2.23, '阿襄', 70.2]&gt;&gt;&gt;print (tinylist * 2) # 输出两次列表['abcd', 786 , 2.23, '阿襄', 70.2, 'abcd', 786 , 2.23, '阿襄', 70.2]&gt;&gt;&gt;print (list + tinylist) # 连接列表['abcd', 786 , 2.23, '阿襄', 70.2, 123, '阿襄']&gt;&gt;&gt;list[3] = '襄襄' #与tuple不同，list的元素值可以被改变&gt;&gt;&gt;print(list)[ 'abcd', 786 , 2.23, '襄襄', 70.2 ]&gt;&gt;&gt;list[1:3] = [777, 223, '赵襄'] #同时也可以使用索引批量更改[ 'abcd', 777, 223, '赵襄', 70.2 ] set类型set类型是集合类型，基本操作与tuple和list一致。 1234567891011121314151617&gt;&gt;&gt;student = &#123;'赵襄', '阿襄', '襄襄', '赵襄'&#125; &gt;&gt;&gt;print(student) # 输出集合，重复的元素被自动去掉&#123;'赵襄', '阿襄', '襄襄'&#125; # set可以进行集合运算&gt;&gt;&gt;a = set('abracadabra')&gt;&gt;&gt;b = set('alacazam')&gt;&gt;&gt;print(a) #顺序可能不一样&#123;'a', 'd', 'r', 'b', 'c'&#125; &gt;&gt;&gt;print(a - b) # a 和 b 的差集&#123;'b', 'd', 'r'&#125;&gt;&gt;&gt;print(a | b) # a 和 b 的并集&#123;'l', 'r', 'a', 'c', 'z', 'm', 'b', 'd'&#125;&gt;&gt;&gt;print(a &amp; b) # a 和 b 的交集&#123;'a', 'c'&#125;&gt;&gt;&gt;print(a ^ b) # a 和 b 中不同时存在的元素&#123;'l', 'r', 'z', 'm', 'b', 'd'&#125; Tips:特别注意，如果创建一个空集合，不能使用a={}，而应当使用a=set()，前者默认是创建一个空的字典，而非一个空的集合。 dictionary类型dictionary是字典类型，类似于平常的字典。主要存储的是键值对（key-value），主要通过key来获取value。 1234567891011121314151617dict = &#123;&#125;dict['wz'] = "赵襄"dict[2] = "阿襄" tinydict = &#123;'name': '赵襄','age':16, 'like': '道'&#125; print (dict['wz']) # 输出键为 'wz' 的值赵襄print (dict[2]) # 输出键为 2 的值阿襄print (tinydict) # 输出完整的字典&#123;'name': '赵襄','age': 21, 'like': '诗'&#125;print (tinydict.keys()) # 输出所有键dict_keys(['name', 'age', 'like'])print (tinydict.values()) # 输出所有值dict_values(['赵襄', 21, '诗'])]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[poem]]></title>
+    <url>%2F2018%2F12%2F20%2Fpoem%2F</url>
+    <content type="text"><![CDATA[打算创建一个关于诗歌的网站。]]></content>
+      <tags>
+        <tag>其它</tag>
+      </tags>
+  </entry>
+</search>
